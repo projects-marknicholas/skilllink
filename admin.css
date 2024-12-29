@@ -1,0 +1,135 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    color: #FE0089;
+    background: linear-gradient(180deg, #FE0089, rgba(255, 255, 255, 0.8)),;
+    margin: 0;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #FE0089;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Make sure the sidebar stays on top */
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.sidebar nav a {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    text-decoration: none;
+    background-color: FFEECC;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+.sidebar nav a:hover {
+    background-color: #FE0089; /* Change on hover */
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 250px; /* Same as the sidebar width */
+    padding: 20px;
+    flex: 1;
+    overflow: auto; /* Allow scrolling for large content */
+}
+
+/* Stats Section */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    background: linear-gradient(180deg, #FE0089, rgba(255, 255, 255, 0.8)),;
+
+}
+
+.stat-card h2 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.stat-card p {
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+}
+
+/* Logo styling */
+.logo {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 200px; /* Ensure a fixed height for the logo container */
+    margin-top: 40px; /* Add space between stats and logo */
+}
+
+.logo-img {
+    max-width: 80%; /* Make sure the image scales but doesn't overflow */
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        height: 150px; /* Smaller logo on smaller screens */
+    }
+
+    .logo-img {
+        max-width: 100%;
+    }
+}
